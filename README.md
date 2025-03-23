@@ -53,10 +53,41 @@ Based on the initial analysis, data shows the correlation table shows a strong p
 Rotational speed `RPM` and `Torque` have a strong negative correlation (r = -0.88), suggesting that higher speed is associated with lower torque. Failure has the highest positive correlation with torque (r = `0.19`) and tool wear (r = `0.11`), though these correlations are still relatively weak. 
 
 Overall, most variables show low direct correlation with failure, implying other factors or combinations may be at play.
+
+During the intial run, the models performed fairly well but it still have room for improvement:
+
+#### 1) Accuracy & Confusion Matrix
+
+| **Model**                         | **Accuracy** | **Confusion Matrix**           |
+|:----------------------------------|:------------:|:------------------------------:|
+| **K-Nearest Neighbor (K=5)**      | 0.9790       | [[1935, 4], [38, 23]]          |
+| **Decision Tree**                 | 0.9795       | [[1932, 7], [34, 27]]          |
+| **Logistic Regression**           | 0.9735       | [[1931, 8], [45, 16]]          |
+| **SVM (Linear Kernel)**           | 0.9770       | [[1936, 3], [43, 18]]          |
+
+
+#### 2) Classification Report Metrics
+
+| **Model**                        | **Precision (0)** | **Recall (0)** | **F1 (0)** | **Precision (1)** | **Recall (1)** | **F1 (1)** | **Macro Avg F1** |
+|:---------------------------------|:-----------------:|:--------------:|:---------:|:-----------------:|:--------------:|:---------:|:----------------:|
+| **K-Nearest Neighbor (K=5)**     | 0.98              | 1.00           | 0.99      | 0.85              | 0.38           | 0.52      | 0.76             |
+| **Decision Tree**                | 0.98              | 1.00           | 0.99      | 0.79              | 0.44           | 0.57      | 0.78             |
+| **Logistic Regression**          | 0.98              | 1.00           | 0.99      | 0.67              | 0.26           | 0.38      | 0.68             |
+| **SVM (Linear Kernel)**          | 0.98              | 1.00           | 0.99      | 0.86              | 0.30           | 0.44      | 0.71             |
+
+
+
+
 ___
 
 ### Next steps
 What suggestions do you have for next steps?
+
+Next steps would be to 
+- Fine-tune all models and re-run results comparison report
+- Try testing with different ranges of hyper-parameters and Gradient Descent
+- Perform more comprehensive cross-validation using GridSearch
+- Select the best model and finalize the CRSIP-DM deliverables.
 ___
 
 ### Outline of project
