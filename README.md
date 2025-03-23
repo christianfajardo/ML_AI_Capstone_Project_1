@@ -83,7 +83,6 @@ ___
 ### Next steps
 What suggestions do you have for next steps?
 
-Next steps would be to 
 - Fine-tune all models and re-run results comparison report
 - Try testing with different ranges of hyper-parameters and Gradient Descent
 - Perform more comprehensive cross-validation using GridSearch
